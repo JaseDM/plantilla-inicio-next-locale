@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* === Vendor CSS (librerías externas) === */
+/*@import "../styles/vendor/leaflet.min.css";*/
+@import "../styles/vendor/swiper.min.css";
+@import "../styles/vendor/vanilla-infinite-marquee.min.css";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* === CSS de la plantilla === */
+@import "../styles/template/badge.css";
+@import "../styles/template/base.css";
+@import "../styles/template/button.css";
+@import "../styles/template/common.css";
+@import "../styles/template/custom-swiper.css";
+@import "../styles/template/header.css";
+@import "../styles/template/icon-font.css";
+@import "../styles/template/navigation-menu.css";
+@import "../styles/template/number-animation.css";
+@import "../styles/template/typography.css";
+@import "../styles/template/variables.css";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@custom-variant dark (&:where(.dark, .dark *));

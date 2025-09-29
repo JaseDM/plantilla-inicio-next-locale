@@ -1,0 +1,36 @@
+{
+  "HomePage": {
+    "title": "¡Hola mundo!",
+    "intro": "Esta es tu app de Next.js internacionalizada.",
+    "description": "Cambia entre tema claro y oscuro con el botón de la esquina inferior derecha.",
+    "cta": "Explorar"
+  },
+  "Header": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "cta": "Empezar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "changeLanguage": "Cambiar idioma",
+    "toggleTheme": "Cambiar tema"
+  },
+  "About": {
+    "title": "Nosotros",
+    "intro": "Conoce quiénes somos y qué nos motiva."
+  },
+  "Contact": {
+    "title": "Contacto",
+    "intro": "¿Tienes dudas? Escríbenos y te respondemos."
+  },
+  "Services": {
+    "title": "Servicios",
+    "intro": "Esto es lo que podemos hacer por ti."
+  },
+  "Portfolio": {
+    "title": "Portafolio",
+    "intro": "Algunos proyectos en los que hemos trabajado."
+  }
+}
