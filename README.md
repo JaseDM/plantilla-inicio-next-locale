@@ -1,5 +1,3 @@
-Claro, aquí tienes el código formateado con **Markdown** y bloques de código para una mejor legibilidad.
-
 # 🌍 Plantilla Base Next.js + next-intl + TailwindCSS 4
 
 Esta plantilla es el punto de partida para proyectos futuros con **Next.js (App Router)**, **next-intl** para internacionalización y **TailwindCSS 4.x** para estilos.
