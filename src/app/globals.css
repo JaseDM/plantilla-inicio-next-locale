@@ -20,3 +20,14 @@
 
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* base: siempre suave */
+.header-bar {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* estado con scroll */
+.header-bar.is-scrolled {
+  @apply bg-white/70 dark:bg-gray-900/70 shadow-md border-white/30;
+  transform: translateY(-2px); /* sutil “pegado” */
+}

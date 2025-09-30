@@ -7,6 +7,7 @@ import {Link, usePathname, getPathname} from '@/i18n/navigation'
 import type {Href} from '@/i18n/navigation'
 import {MAIN_MENU} from '@/i18n/routing'
 import LocaleSwitch from './LocaleSwitch'
+import {initHeaderAnimations} from '@/lib/animations/headerScroll'
 
 
 type Props = {
@@ -58,20 +59,31 @@ export default function HeaderOne({
     return pathname === target || pathname.startsWith(target + '/')
   }
 
+ 
+
+    useEffect(() => {
+      const cleanup = initHeaderAnimations()
+      return cleanup
+    }, [])
+
+
   return (
-    <header>
+    <header className='header-one'>
       {/* Barra superior estilo glass */}
       <div
         className={[
-          'fixed inset-x-0 top-0 z-[9999]',
-          'mx-auto w-full',
-          'backdrop-blur-xl backdrop-saturate-150',
-          'bg-white/30 dark:bg-gray-900/30',
-          'border border-white/20 dark:border-white/10',
-          'rounded-full',
-          'max-w-[1290px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] min-[500px]:max-w-[450px] min-[425px]:max-w-[375px] max-w-[320px]',
-          'px-3 py-2 xl:py-0',
-          'left-1/2 -translate-x-1/2 top-5',
+            'header.one',
+            'fixed inset-x-0 top-0 z-[9999]',
+            'mx-auto w-full',
+            'backdrop-blur-xl backdrop-saturate-150',
+            'bg-white/30 dark:bg-gray-900/30',
+            'border border-white/20 dark:border-white/10',
+            'rounded-full',
+            'max-w-[1290px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] min-[500px]:max-w-[450px] min-[425px]:max-w-[375px] max-w-[320px]',
+            'px-3 py-2 xl:py-0',
+            'left-1/2 -translate-x-1/2 top-5',
+            'js-header-bar',          // ✅ identifica el bloque visible
+            'header-bar', 
           className
         ].join(' ')}
       >
@@ -239,5 +251,5 @@ export default function HeaderOne({
         onClick={() => setOpen(false)}
       />
     </header>
-  )
-}
+    )
+  }
